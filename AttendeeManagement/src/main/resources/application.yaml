@@ -1,0 +1,16 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: ATTENDEE-SERVICE
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/attendeeManagement
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  config:
+    import: configserver:http://localhost:9296
